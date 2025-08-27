@@ -27,7 +27,6 @@ const Header = () => {
       {/* Logo */}
       <div className="flex items-center gap-2">
         <img src={logo} alt="Logo" className="h-10 w-10 object-contain" />
-        <span className="text-xl font-bold text-gray-800">GreenHouse</span>
       </div>
 
       {/* Navbar */}
