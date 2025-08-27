@@ -19,8 +19,9 @@ const Hero = () => {
 
       <div className="mt-6">
         <a
-          href="#services"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSc5AVkn0JtTpq8L3OaPrgyoT_gy4jFgwVG2OZrztcIoWfxpVA/viewform?usp=header "
           className="bg-black text-white text-lg md:text-xl rounded-lg px-6 py-3 shadow-lg hover:bg-gray-800 transition duration-300"
+          target='_blank'
         >
           Book Appointment
         </a>

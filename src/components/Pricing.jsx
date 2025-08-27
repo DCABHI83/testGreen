@@ -18,8 +18,9 @@ const PriceCard = ({ title, price, features }) => {
 
         <div className="flex justify-center mt-auto">
           <a
-            href="#book"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSc5AVkn0JtTpq8L3OaPrgyoT_gy4jFgwVG2OZrztcIoWfxpVA/viewform?usp=header "
             className="bg-[#E2E2E2] px-6 py-2 rounded-lg text-lg md:text-xl hover:bg-[#d6d6d6] transition"
+            target="_blank"
           >
             Book Now
           </a>

@@ -76,6 +76,13 @@ const Home = () => {
         <Pricing />
       </motion.section>
 
+      <section className="bg-yellow-100 py-4 text-center mb-4">
+  <p className="text-gray-800 font-medium animate-pulse ">
+    🚀 We are currently working on a fully fledged website with more features. Stay tuned!
+  </p>
+</section>
+
+
       {/* Footer Section */}
       <motion.section
         id="footer"

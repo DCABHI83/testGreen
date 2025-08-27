@@ -1,15 +1,15 @@
 import React from 'react'
+import logo from '../assets/logo.png'
 
 const Footer = () => {
   return (
     <>
       <footer className="bg-gray-900 text-white px-6 py-10">
-        {/* Grid Layout */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          {/* Logo / Branding */}
+          {/* Logo & About */}
           <div>
-            <h1 className="text-2xl font-bold">LOGO</h1>
+            <img src={logo} alt="Company Logo" className="w-28 mb-3" />  
             <p className="mt-2 text-gray-400 text-sm">
               Professional cleaning services for your home.
             </p>
@@ -18,11 +18,13 @@ const Footer = () => {
           {/* Contact Section */}
           <div>
             <h1 className="text-xl font-semibold mb-3">Contact Us</h1>
-            <p className="text-gray-300">📞 +91 xxxxxxxxxx</p>
-            <p className="text-gray-300">📧 info@cleaningservices.com</p>
+            <p className="text-gray-300">📞 +91 7004105221</p>
+            <p className="text-gray-300">📧 greenhousecleaning04@gmail.com</p>
             <a
-              href="#book"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSc5AVkn0JtTpq8L3OaPrgyoT_gy4jFgwVG2OZrztcIoWfxpVA/viewform?usp=header"
               className="inline-block mt-3 bg-white text-black px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Book Appointment
             </a>

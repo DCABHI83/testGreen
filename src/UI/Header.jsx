@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../assets/logo.png';
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
-    const options = {
-      threshold: 0.5, 
-    };
+    const options = { threshold: 0.5 };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -18,16 +17,18 @@ const Header = () => {
     }, options);
 
     sections.forEach((section) => observer.observe(section));
-
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
   }, []);
 
   return (
-    <div className="flex justify-around items-center my-3 sticky top-0 bg-white shadow-md z-50 p-4">
+    <div className="flex justify-between items-center my-3 sticky top-0 bg-white shadow-md z-50 px-6 py-3">
       {/* Logo */}
-      <div className="text-xl font-bold">Logo</div>
+      <div className="flex items-center gap-2">
+        <img src={logo} alt="Logo" className="h-10 w-10 object-contain" />
+        <span className="text-xl font-bold text-gray-800">GreenHouse</span>
+      </div>
 
       {/* Navbar */}
       <div className="flex gap-4">
@@ -53,7 +54,7 @@ const Header = () => {
         </a>
         <a
           href="#contact"
-          className={`rounded  py-2 px-4 transition ${
+          className={`rounded py-2 px-4 transition ${
             activeSection === "contact"
               ? "bg-blue-600 text-white"
               : "bg-[#EEEEEE] hover:bg-blue-600 hover:text-white"
