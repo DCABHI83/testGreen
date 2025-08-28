@@ -6,7 +6,7 @@ import Pricing from './Pricing'
 import Footer from '../UI/Footer'
 import Features from './Features'
 import { motion } from 'framer-motion'
-
+import ScrollDownButton from './ScrollDownButton'
 // Animation variants for reuse
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -80,6 +80,9 @@ const Home = () => {
   <p className="text-gray-800 font-medium animate-pulse ">
     🚀 We are currently working on a fully fledged website with more features. Stay tuned!
   </p>
+</section>
+<section>
+  <ScrollDownButton/>
 </section>
 
 
