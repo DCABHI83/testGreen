@@ -1,20 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 
-const PriceCard = ({ title, price, features }) => {
+const PriceCard = ({ title, price, features, terms }) => {
+  const [showTerms, setShowTerms] = useState(false);
+
   return (
     <div className="w-full md:w-1/3 p-4">
-      <div className="bg-[#F5F5F5] rounded-xl p-6 flex flex-col gap-8 h-full">
-        <div className="flex flex-col gap-3">
+      <div className="bg-[#F5F5F5] rounded-xl p-6 flex flex-col gap-6 h-full shadow-md hover:shadow-lg transition">
+        {/* Title + Price */}
+        <div className="flex flex-col gap-2">
           <p className="text-lg md:text-xl font-medium">{title}</p>
           <h1 className="text-xl md:text-2xl font-black">{price}</h1>
         </div>
 
+        {/* Features */}
         <div className="flex flex-col gap-2 text-base md:text-lg">
           {features.map((item, index) => (
             <h2 key={index}>⭐ {item}</h2>
           ))}
         </div>
 
+        {/* Collapsible Terms */}
+        <div className="mt-3">
+          <button
+            className="text-sm text-gray-700 hover:text-gray-900 font-medium underline"
+            onClick={() => setShowTerms(!showTerms)}
+          >
+            {showTerms ? "Hide Terms & Conditions" : "View Terms & Conditions"}
+          </button>
+
+          {showTerms && (
+            <div className="text-sm text-gray-600 italic mt-2 bg-gray-200 p-3 rounded-md">
+              <p>⚠ {terms}</p>
+            </div>
+          )}
+        </div>
+
+        {/* Book Button */}
         <div className="flex justify-center mt-auto">
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSc5AVkn0JtTpq8L3OaPrgyoT_gy4jFgwVG2OZrztcIoWfxpVA/viewform?usp=header"
@@ -41,6 +62,7 @@ const Pricing = () => {
         "1BHK, 2BHK, 3BHK supported",
         "Bathrooms & balconies included",
       ],
+      terms: "Price depends on the size & condition of the flat.",
     },
     {
       title: "Room Cleaning",
@@ -50,6 +72,7 @@ const Pricing = () => {
         "Eco-friendly products",
         "Quick service",
       ],
+      terms: "Final cost may vary depending on dirt level.",
     },
     {
       title: "Kitchen Cleaning",
@@ -59,6 +82,7 @@ const Pricing = () => {
         "Sink & tiles scrubbing",
         "Appliances surface cleaning",
       ],
+      terms: "Price varies with stains, grease level, and kitchen size.",
     },
     {
       title: "Others (Add-ons)",
@@ -69,6 +93,7 @@ const Pricing = () => {
         "AC Cleaning: ₹399*",
         "Car Cleaning: ₹699* onwards",
       ],
+      terms: "Final charges depend on usage & dirtiness of the item.",
     },
   ];
 
@@ -79,13 +104,14 @@ const Pricing = () => {
         <div className="w-[14rem] h-[4px] md:w-[17rem] bg-[#999999] mt-2"></div>
       </div>
 
-      <div className="flex flex-col md:flex-row  gap-6">
+      <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-6">
         {pricingData.map((item, index) => (
           <PriceCard
             key={index}
             title={item.title}
             price={item.price}
             features={item.features}
+            terms={item.terms}
           />
         ))}
       </div>

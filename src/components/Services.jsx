@@ -2,12 +2,17 @@ import React from 'react'
 import sofa from '../assets/clean-3.webp'
 import room from '../assets/room.jpg'
 import flat from '../assets/flat.jpg'
-
+import carWash from '../assets/carWash.jpg'
+import cleanAc from '../assets/cleanAC.webp'
+import bathroom from '../assets/bathroom-cleaning-service.jpeg'
 const Services = () => {
   const services = [
     { img: sofa, title: "Sofa Cleaning" },
     { img: room, title: "Room Cleaning" },
     { img: flat, title: "Flat Cleaning" },
+    { img: carWash, title: "Car Cleaning" },
+    { img: cleanAc, title: "AC Cleaning" },
+    { img: bathroom, title: "Bathroom Cleaning" },
   ]
 
   return (
