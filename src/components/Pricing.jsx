@@ -66,8 +66,8 @@ const Pricing = () => {
       features: [
         "Sofa Cleaning: ₹299 – ₹599*",
         "Bathroom: ₹499 – ₹999*",
-        "AC Cleaning: ₹599*",
-        "Car Cleaning: ₹399* onwards",
+        "AC Cleaning: ₹399*",
+        "Car Cleaning: ₹699* onwards",
       ],
     },
   ];
